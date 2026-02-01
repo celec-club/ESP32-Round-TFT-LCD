@@ -48,6 +48,13 @@
 
 */
 
+/*
+ Code adapted for PlatformIO from the Arduino IDE example
+ Code adapted for 1.28"TFT VER1.0 240x240 display with GC9A01 driver
+ Connected to an ESP32-DOIT DEVKIT V1.0 board
+ Modified by Ibrahim Khadraoui 1 February 2026
+*/
+
 #include <SPI.h>
 #include <TFT_eSPI.h>  // Hardware-specific library
 
