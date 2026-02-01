@@ -18,11 +18,12 @@ void setup() {
   Serial.begin(115200);
 
   tft.begin();
-  tft.setRotation(3);
+  tft.setRotation(0);  // Portrait mode for round display
   tft.fillScreen(TFT_BLACK);
 
-  // Graph area is 200 pixels wide, 150 pixels high, dark grey background
-  gr.createGraph(200, 150, tft.color565(5, 5, 5));
+  // Graph area is 200 pixels wide, 200 pixels high, dark grey background
+  // Sized to fit well within the circular display
+  gr.createGraph(200, 200, tft.color565(5, 5, 5));
 
   // x scale units is from 0 to 100, y scale units is -512 to 512
   gr.setGraphScale(gxLow, gxHigh, gyLow, gyHigh);
@@ -32,8 +33,8 @@ void setup() {
   // blue grid
   gr.setGraphGrid(gxLow, 20.0, gyLow, 64.0, TFT_BLUE);
 
-  // Draw empty graph, top left corner at pixel coordinate 40,10 on TFT
-  gr.drawGraph(40, 10);
+  // Draw empty graph, centered on round display (240-200)/2 = 20 pixels offset
+  gr.drawGraph(20, 20);
 
   // Start a trace with using red, trace points are in x and y scale units
   // In this example a horizontal line is drawn
@@ -70,8 +71,8 @@ void loop() {
       gx = 0.0;
       gy = 0.0;
 
-      // Draw empty graph at 40,10 on display to clear old one
-      gr.drawGraph(40, 10);
+      // Draw empty graph at 20,20 on display to clear old one
+      gr.drawGraph(20, 20);
       // Start new trace
       tr.startTrace(TFT_GREEN);
     }
