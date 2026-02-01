@@ -2,6 +2,8 @@
 
 This project demonstrates how to use a round RGB TFT display with the GC9A01 driver IC and an ESP32 microcontroller. The example includes a color test program that displays text in different colors and demonstrates the display inversion feature.
 
+![ESP32 to GC9A01 TFT Wiring Diagram](docs/images/demo.gif)
+
 ## Hardware Requirements
 
 - ESP32 Development Board (ESP32 DOIT DevKit v1 or compatible)
