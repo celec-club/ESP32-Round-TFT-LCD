@@ -2,8 +2,6 @@
 
 This project demonstrates how to use a round RGB TFT display with the GC9A01 driver IC and an ESP32 microcontroller. The example includes a color test program that displays text in different colors and demonstrates the display inversion feature.
 
-![ESP32 to GC9A01 TFT Wiring Diagram](docs/images/demo.gif)
-
 ## Hardware Requirements
 
 - ESP32 Development Board (ESP32 DOIT DevKit v1 or compatible)
@@ -76,18 +74,15 @@ platformio run --target upload
 
 Or use the PlatformIO upload button in VS Code.
 
-### What the Demo Does
+## Example Projects
 
-The example program demonstrates:
+This repository includes three example projects demonstrating different features of the GC9A01 display:
 
-1. **Display Initialization** - Initializes the TFT with default settings
-2. **Graphics** - Draws a green circle around the display edge
-3. **Text Display** - Shows colored text (white, red, green, blue) on the screen
-4. **Color Inversion** - Alternates between normal and inverted color modes every 5 seconds
+1. **[Analog Meter](src/analog_meter/README.md)** - An animated speedometer-style gauge with color zones
+2. **[Graph Widget](src/graph/README.md)** - Real-time graph plotting with multiple traces
+3. **[Color Test](src/test_font/README.md)** - Text rendering and display inversion demo
 
-The display will cycle through:
-- Normal color mode with colored text
-- Inverted color mode (swaps black/white and other colors)
+Each project has its own README with detailed information. To switch between projects, update the `src_dir` setting in [platformio.ini](platformio.ini).
 
 ### Using the TFT in Your Own Projects
 
